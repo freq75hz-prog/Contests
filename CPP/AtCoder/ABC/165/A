@@ -1,0 +1,28 @@
+#include "bits/stdc++.h"
+using namespace std;
+
+// 自動呼び出し
+struct fast_io {
+    static constexpr int IOS_PREC = 15; static constexpr bool AUTOFLUSH = false;
+    fast_io() { cin.tie(nullptr); ios::sync_with_stdio(false); cout << fixed << setprecision(IOS_PREC); if (AUTOFLUSH) cout << unitbuf; }
+} fast_io;
+
+void solve() {
+    int k;
+    cin >> k;
+    int a, b;
+    cin >> a >> b;
+    FOR(i, a, b + 1, 1) {
+        if (i % k == 0) {
+            cout << "OK" << "\n";
+            return;
+        }
+    }
+    cout << "NG" << "\n";
+}
+
+signed main()
+{    
+    solve();
+    return 0;
+}
