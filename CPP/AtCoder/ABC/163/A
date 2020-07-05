@@ -1,0 +1,13 @@
+#include "bits/stdc++.h"
+using namespace std;
+
+void solve() {
+    int s; cin >> s;
+    out(2 * s * PI);
+}
+
+signed main()
+{    
+    solve();
+    return 0;
+}
