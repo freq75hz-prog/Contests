@@ -1,0 +1,29 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
+#include <map>
+#define REP(i,n)	  for(int i=0;i<n;i++)
+#define FOR(i,b,e,s)  for(int i=b;i<e;i+=s)
+#define RREP(i,n)	  for(int i=n;i>=0;i--)
+#define RFOR(i,b,e,s) for(int i=e;i>=b;i-=s)
+#define ALL(A) begin(A),end(A)
+#define SORT(A) sort(ALL(A))
+#define RALL(A) rbegin(A),rend(A)
+#define RSORT(A) sort(RALL(A))
+using namespace std;
+using ll = long long;
+ 
+void solve() {
+	string s;
+	cin >> s;
+	char c = s[s.size() - 1];	
+	if (c == '3') cout << "bon" << "\n";
+	else if (c == '0' or c == '1' or c == '6' or c == '8') cout << "pon" << "\n";
+	else cout << "hon" << "\n";
+}
+signed main()
+{
+	solve();
+	return 0;
+}
