@@ -1,0 +1,28 @@
+#include "bits/stdc++.h"
+using namespace std;
+
+namespace {
+    template<typename C>ll SZ(const C& c) { return static_cast<ll>(c.size()); }   
+}
+void solve() {
+    string s, t;
+    cin >> s >> t;
+    REP(i, SZ(s)) {
+        if (s[i] != t[i]) {
+            cout << "No" << "\n";
+            return;
+        }
+    }
+    if (SZ(t) - SZ(s) == 1) {
+        cout << "Yes" << "\n";
+    }
+    else {
+        cout << "No" << "\n";
+    }
+}
+
+signed main()
+{    
+    solve();
+    return 0;
+}
