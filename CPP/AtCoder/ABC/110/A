@@ -1,0 +1,8 @@
+void solve() {
+    // A - Maximize the Formula
+    int A, B, C;
+    cin >> A >> B >> C;
+    vector<int> V{ A,B,C };
+    RSORT(V);
+    out(V[2] + stoi(to_string(V[0]) + to_string(V[1])));
+}
