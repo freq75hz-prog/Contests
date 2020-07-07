@@ -1,0 +1,10 @@
+ template<typename C = int>C in() { C n; cin >> n; return n; }
+ template<typename T>void out(T value) { cout << value << "\n"; }
+    
+void solve() {
+    // A - Pair
+    int K = in();
+    int hlf = K / 2;
+    int ans = (K % 2 == 0 ? hlf * hlf : hlf * (hlf + 1));
+    out(ans);
+}
