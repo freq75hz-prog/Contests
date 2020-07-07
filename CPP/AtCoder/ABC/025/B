@@ -1,0 +1,20 @@
+void solve() {
+    int N = in(), A = in(), B = in();
+    int pos = 0;
+    REP(i, N) {
+        string s = in<string>();
+        int d = in();
+        int mov{ 0 };
+        if (d < A) mov = A;
+        else if (A <= d and d <= B) mov = d;
+        else mov = B;
+        if (s == "West") mov = negate<int>()(mov);
+        pos += mov;
+    }
+    if (pos == 0) out(0);
+    else {
+        string dir = (pos > 0 ? "East" : "West");
+        if (dir == "West") pos = negate<int>()(pos);
+        cout << dir << " " << pos << "\n";
+    }
+}
