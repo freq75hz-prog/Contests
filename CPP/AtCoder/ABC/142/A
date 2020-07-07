@@ -1,0 +1,8 @@
+void solve() {
+    // Odds of Oddness
+    int N;
+    cin >> N;
+    int ans = N / 2;
+    ans += (N % 2 != 0);
+    out(double(ans)/N);
+}
