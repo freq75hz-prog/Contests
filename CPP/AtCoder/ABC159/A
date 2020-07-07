@@ -1,0 +1,6 @@
+void solve() {
+    // A - The Number of Even Pairs
+    int N, M;
+    cin >> N >> M;
+    out((N * (N - 1))/2 + (M * (M - 1))/2);
+}
