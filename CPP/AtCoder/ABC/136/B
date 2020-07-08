@@ -1,0 +1,9 @@
+void solve() {
+    int N = in();    
+    int cnt{ 0 };
+    FOR(i, 1, N + 1, 1) {
+        string s = to_string(i);
+        if (SZ(s) & 1) cnt++;
+    }
+    out(cnt);
+}
