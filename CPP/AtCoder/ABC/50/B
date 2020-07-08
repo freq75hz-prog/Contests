@@ -1,0 +1,20 @@
+using VI = vector<int>;
+void solve() {
+    int num_of_problems = in();
+    VI solved_times(num_of_problems);
+    REP(i, num_of_problems) {
+        solved_times[i] = in();
+    }
+    int kind_of_energy = in();
+    REP(i, kind_of_energy) {
+        int prob_no = in();
+        prob_no--;
+        int alter_time = in();
+        int ans{ 0 };
+        REP(i, num_of_problems) {
+            ans += (i == prob_no ? alter_time : solved_times[i]);
+        }
+        out(ans);
+    }
+
+}
