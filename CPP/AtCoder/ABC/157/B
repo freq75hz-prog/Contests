@@ -1,0 +1,47 @@
+void solve() {
+    vector<vector<int>> vvi(3, vector<int>(3));
+    REP(i, 3) {
+        REP(j, 3) {
+            int d = in();
+            vvi[i][j] = d;
+        }
+    }
+    int N = in();
+    REP(k, N) {
+        int v = in();
+        REP(i, 3) {
+            REP(j, 3) {
+                if (vvi[i][j] == v) {
+                    vvi[i][j] = -1;
+                }
+            }
+        }
+    }
+    REP(i, 3) {
+        if (all_of(ALL(vvi[i]), [](int x) { return x == -1; })) {
+            out("Yes");
+            return;
+        }
+    }
+    REP(j, 3) {
+        bool flag = true;
+        REP(i, 3) {
+            if (vvi[i][j] != -1) {
+                flag = false;
+            }
+        }
+        if (flag) {
+            out("Yes");
+            return;
+        }
+    }
+    if (vvi[0][0] == -1 and vvi[1][1] == -1 and vvi[2][2] == -1) {
+        out("Yes");
+    }
+    else if (vvi[2][0] == -1 and vvi[1][1] == -1 and vvi[0][2] == -1) {
+        out("Yes");
+    }
+    else {
+        out("No");
+    }
+}
